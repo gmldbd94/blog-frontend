@@ -1,0 +1,41 @@
+@import '../../../styles/utils.scss';
+
+.editor-pane {
+  flex: 1; // 자신에게 주어진 영역을 다 채우기
+  // 세로방향으로 내용 나열
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    background: $oc-gray-7;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: white;
+    font-weight: 500;
+    &::placeholder {
+      color: rgba(255,255,255,0.75);
+    }
+  }
+
+  .code-editor {
+    flex: 9; // 남는 영역 다 차지하기
+    background: $oc-gray-9;
+    display: flex;
+    flex-direction: column; // .CodeMirror 가 세로영역을 전부 차지
+  }
+  //줄바꿈 설정 넣어줄것
+  input {
+    font-size: 0.85rem;
+    border: none;
+    flex: 1;
+    background: none;
+    outline: none;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    &::placeholder {
+      color: rgba(255,255,255,0.75);
+    }
+  }
+}
